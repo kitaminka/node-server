@@ -21,20 +21,34 @@ module.exports = {
     async getContent(name, response, statusCode = 200) {
         try {
             const content = fs.readFileSync(`./public/pages/${name}.html`, 'utf-8');
-            response.statusCode = 404;
+            response.statusCode = statusCode;
             return content;
         } catch {
             if (statusCode !== 404) {
                 return await this.getContent('/404', response, 404);
             } else {
-                throw '404 file don`t exist!'
+                throw '404 file don`t found!'
             }
         }
     },
     async getElem(name) {
-        return fs.readFileSync(`./public/elems/${name}.html`, 'utf-8');
+        try {
+            return fs.readFileSync(`./public/elems/${name}.html`, 'utf-8');
+        } catch {
+            throw `${name} don\`t found!`
+        }
     },
-    async getFile(path) {
-        return fs.readFileSync(`./${path}`);
+    async getFile(path, response, statusCode = 200) {
+        try {
+            const file = fs.readFileSync(`./${path}`);
+            response.statusCode = statusCode;
+            return file;
+        } catch {
+            if (statusCode !== 404) {
+                return await this.getPage('404', response);
+            } else {
+                throw '404 file don`t found!'
+            }
+        }
     }
 }

@@ -8,7 +8,10 @@ module.exports = {
                 this.redirectHome(response);
             } else if (request.url.startsWith('/public/')) {
                 this.returnFile(request, response);
-            } else  {
+            } else {
+                if (request.url.endsWith('/')) {
+                    request.url = request.url.slice(0, -1);
+                }
                 this.returnPage(request, response);
             }
         }).listen(80);
@@ -27,8 +30,9 @@ module.exports = {
         });
     },
     async returnFile(request, response) {
-        page.getFile(request.url).then( (content) => {
-            response.statusCode = 200;
+        page.getFile(request.url, response).then( (content) => {
+            if (request.url.endsWith('.css')) response.setHeader('Content-Type', 'text/css');
+            else if (request.url.endsWith('.css')) response.setHeader('Content-Type', 'text/javascript');
             response.write(content);
             response.end();
         });
