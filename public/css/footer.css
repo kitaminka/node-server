@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background-color: #fddb76;
+}
+#github {
+    margin-left: 20px;
+}
+.footer__item {
+    width: 50px;
+    height: 50px;
+}
+.item__image {
+    width: 100%;
+    height: 100%;
+}

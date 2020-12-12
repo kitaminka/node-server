@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Merriweather Sans;
+    src: url('../fonts/MerriweatherSans-Bold.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url('../img/background.png');
+    width: 100%;
+    height: 80%;
+}
+.main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px;
+    margin-top: 150px;
+    width: 75%;
+    color: #4396ff;
+}
+.main__header h1 {
+    font-size: 150px;
+}
+.main__header p {
+    font-size: 30px;
+}
+.header__button {
+    margin-top: 30px;
+    background-color: #ffcb30;
+    padding: 15px;
+    margin-right: 50px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 -4px #ffbc47 inset;
+}
+.header__button:hover {
+    background-color: #ffbc47;
+}
+.header__button a {
+    color: #35c9ff;
+    text-decoration: none;
+    font-size: 50px;
+}
