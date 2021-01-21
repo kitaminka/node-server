@@ -2,18 +2,18 @@ const fs = require('fs');
 
 module.exports = {
     async getPage(name, response) {
-        let content = await this.getContent(name, response);
+        let main = await this.getContent(name, response);
         const header = await this.getElem('header');
         const footer = await this.getElem('footer');
         let layout = await this.getElem('layout');
 
-        const title = content.match(/{setTitle "(.*?)"}/);
+        const title = main.match(/{setTitle "(.*?)"}/);
         if (title) {
             layout = layout.replace(/{getTitle}/, title[1]);
-            content = content.replace(/{setTitle ".*?"}/, '');
+            main = main.replace(/{setTitle ".*?"}/, '');
         }
-        layout = layout.replace(/{content}/, content);
-        layout = layout.replace(/{menu}/, header);
+        layout = layout.replace(/{main}/, main);
+        layout = layout.replace(/{header}/, header);
         layout = layout.replace(/{footer}/, footer);
 
         return layout;
@@ -47,7 +47,7 @@ module.exports = {
             if (statusCode !== 404) {
                 return await this.getPage('404', response);
             } else {
-                throw '404 file don`t found!'
+                throw '404 file don`t found!';
             }
         }
     }
