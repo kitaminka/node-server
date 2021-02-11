@@ -11,9 +11,9 @@ header {
     align-items: center;
     justify-content: center;
 }
-.nav__item {
+.navItem {
     text-decoration: none;
-    color: #35c9ff;
+    color: #4396ff;
     margin: 0 10px;
     font-size: 25px;
     background-color: #ffcb30;
@@ -22,8 +22,9 @@ header {
     transition: all 0.3s;
     box-shadow: 0 -4px #ffbc47 inset;
 }
-.nav__item:hover {
+.navItem:hover {
     background-color: #ffbc47;
+    cursor: pointer;
 }
 .active {
     background-color: #ffbc47;
@@ -33,7 +34,7 @@ header {
     width: 50px;
     height: 50px;
 }
-.logo__image {
+.logoImage {
     width: 100%;
     height: 100%;
 }

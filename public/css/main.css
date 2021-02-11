@@ -20,10 +20,10 @@ main {
     height: 80%;
     background-color: #ffe8aa;
 }
-.image_background {
+.backgroundImage {
     background-image: url('../img/background.png');
 }
-.main__header {
+.homeHeader {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -32,13 +32,13 @@ main {
     width: 75%;
     color: #4396ff;
 }
-.main__header h1 {
+.homeHeader h1 {
     font-size: 150px;
 }
-.main__header p {
+.homeHeader p {
     font-size: 30px;
 }
-.header__button {
+.bigButton {
     margin-top: 30px;
     background-color: #ffcb30;
     padding: 15px;
@@ -47,15 +47,16 @@ main {
     transition: all 0.3s;
     box-shadow: 0 -4px #ffbc47 inset;
 }
-.header__button:hover {
+.bigButton:hover {
     background-color: #ffbc47;
+    cursor: pointer;
 }
-.header__button a {
-    color: #35c9ff;
+.bigButton a {
+    color: #4396ff;
     text-decoration: none;
     font-size: 50px;
 }
-.main__about {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,11 +65,14 @@ main {
     width: 75%;
     color: #4396ff;
 }
-.main__about h1 {
+.container h1 {
     margin-bottom: 30px;
     font-size: 50px;
 }
-.main__about li {
+.container p {
+    font-size: 30px;
+}
+.bigList li {
     margin-bottom: 30px;
     font-size: 30px;
 }
@@ -85,72 +89,18 @@ main {
     margin-bottom: 30px;
     font-size: 50px;
 }
-.main__services ul {
+.backgroundList {
     background-color: #fddb76;
     padding: 40px;
     margin: 30px;
     border-radius: 10px;
 }
-.main__services li {
+.backgroundList li {
     margin: 15px;
     font-size: 30px;
 }
-.services__button {
-    margin-top: 30px;
-    background-color: #ffcb30;
-    padding: 15px;
-    margin-right: 50px;
-    border-radius: 10px;
-    transition: all 0.3s;
-    box-shadow: 0 -4px #ffbc47 inset;
-}
-.services__button:hover {
-    background-color: #ffbc47;
-}
-.services__button a {
-    color: #35c9ff;
-    text-decoration: none;
-    font-size: 50px;
-}
-.main__prices {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    margin-top: 150px;
-    width: 75%;
-    color: #4396ff;
-}
-.main__prices h1 {
+.title {
     margin-bottom: 30px;
     font-size: 50px;
-}
-.main__prices p {
-    font-size: 30px;
-}
-.main__prices ul {
-    background-color: #fddb76;
-    padding: 40px;
-    margin: 30px;
-    border-radius: 10px;
-}
-.main__prices li {
-    margin: 15px;
-    font-size: 30px;
-}
-.main__works {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    margin-top: 150px;
-    width: 75%;
     color: #4396ff;
-}
-.main__works h1 {
-    margin-bottom: 30px;
-    font-size: 50px;
-}
-.main__works p {
-    font-size: 30px;
 }
