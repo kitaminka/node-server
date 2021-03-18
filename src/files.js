@@ -20,14 +20,13 @@ module.exports = {
     },
     async getContent(name, response, statusCode = 200) {
         try {
-            const content = fs.readFileSync(`./public/pages/${name}.html`, 'utf-8');
-            response.statusCode = statusCode;
-            return content;
+            return fs.readFileSync(`./public/pages/${name}.html`, 'utf-8');
         } catch {
             if (statusCode !== 404) {
-                return await this.getContent('/404', response, 404);
+                response.statusCode = 404;
+                return this.getContent('/404', response, 404);
             } else {
-                throw '404 file don`t found!'
+                throw '404 file don`t found!';
             }
         }
     },
@@ -35,17 +34,16 @@ module.exports = {
         try {
             return fs.readFileSync(`./public/elems/${name}.html`, 'utf-8');
         } catch {
-            throw `${name} don\`t found!`
+            throw `${name} don\`t found!`;
         }
     },
     async getFile(path, response, statusCode = 200) {
         try {
-            const file = fs.readFileSync(`./${path}`);
-            response.statusCode = statusCode;
-            return file;
+            return fs.readFileSync(`./${path}`);
         } catch {
             if (statusCode !== 404) {
-                return await this.getPage('404', response);
+                response.statusCode = 404;
+                return this.getPage('404', response, 404);
             } else {
                 throw '404 file don`t found!';
             }
