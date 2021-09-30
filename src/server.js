@@ -14,7 +14,7 @@ module.exports = {
                 }
                 this.returnPage(request, response);
             }
-        }).listen(80);
+        }).listen(process.env.PORT || 3000);
     },
     async redirectHome(response) {
         response.statusCode = 302;
@@ -22,14 +22,14 @@ module.exports = {
         response.end();
     },
     async returnPage(request, response) {
-        page.getPage(request.url.slice(1), response).then( (content) => {
+        page.getPage(request.url.slice(1), response).then((content) => {
             response.setHeader('Content-Type', 'text/html');
             response.write(content);
             response.end();
         });
     },
     async returnFile(request, response) {
-        page.getFile(request.url, response).then( (content) => {
+        page.getFile(request.url, response).then((content) => {
             if (response.statusCode !== 404) {
                 if (request.url.endsWith('.css')) response.setHeader('Content-Type', 'text/css');
                 else if (request.url.endsWith('.css')) response.setHeader('Content-Type', 'text/javascript');

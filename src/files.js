@@ -26,7 +26,7 @@ module.exports = {
                 response.statusCode = 404;
                 return this.getContent('/404', response, 404);
             } else {
-                throw '404 file don`t found!';
+                console.error('404 file not found!');
             }
         }
     },
@@ -34,7 +34,7 @@ module.exports = {
         try {
             return fs.readFileSync(`./public/elems/${name}.html`, 'utf-8');
         } catch {
-            throw `${name} don\`t found!`;
+            console.error(`${name} element file not found!`);
         }
     },
     async getFile(path, response, statusCode = 200) {
@@ -45,7 +45,7 @@ module.exports = {
                 response.statusCode = 404;
                 return this.getPage('404', response, 404);
             } else {
-                throw '404 file don`t found!';
+                console.error('404 file not found');
             }
         }
     }
