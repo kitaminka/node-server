@@ -1,7 +1,3 @@
-@font-face {
-    font-family: Merriweather Sans;
-    src: url('../fonts/MerriweatherSans-Bold.ttf');
-}
 * {
     margin: 0;
     padding: 0;
@@ -9,98 +5,13 @@
 body {
     width: 100vw;
     height: 100vh;
-    font-family: 'Merriweather Sans', sans-serif;
 }
 main {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-size: cover;
     width: 100%;
     height: 80%;
-    background-color: #ffe8aa;
-}
-.backgroundImage {
-    background-image: url('../img/background.png');
-}
-.homeHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 30px;
-    margin-top: 150px;
-    width: 75%;
-    color: #4396ff;
-}
-.homeHeader h1 {
-    font-size: 150px;
-}
-.homeHeader p {
-    font-size: 30px;
-}
-.bigButton {
-    margin-top: 30px;
-    background-color: #ffcb30;
-    padding: 15px;
-    margin-right: 50px;
-    border-radius: 10px;
-    transition: all 0.3s;
-    box-shadow: 0 -4px #ffbc47 inset;
-}
-.bigButton:hover {
-    background-color: #ffbc47;
-    cursor: pointer;
-}
-.bigButton a {
-    color: #4396ff;
-    text-decoration: none;
-    font-size: 50px;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    margin-top: 150px;
-    width: 75%;
-    color: #4396ff;
-}
-.container h1 {
-    margin-bottom: 30px;
-    font-size: 50px;
-}
-.container p {
-    font-size: 30px;
-}
-.bigList li {
-    margin-bottom: 30px;
-    font-size: 30px;
-}
-.main__services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    margin-top: 150px;
-    width: 75%;
-    color: #4396ff;
-}
-.main__services h1 {
-    margin-bottom: 30px;
-    font-size: 50px;
-}
-.backgroundList {
-    background-color: #fddb76;
-    padding: 40px;
-    margin: 30px;
-    border-radius: 10px;
-}
-.backgroundList li {
-    margin: 15px;
-    font-size: 30px;
-}
-.title {
-    margin-bottom: 30px;
-    font-size: 50px;
-    color: #4396ff;
 }

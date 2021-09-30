@@ -11,6 +11,8 @@ module.exports = {
         if (title) {
             layout = layout.replace(/{getTitle}/, title[1]);
             main = main.replace(/{setTitle ".*?"}/, '');
+        } else {
+            layout = layout.replace(/{getTitle}/, process.env.DEFAULT_TITLE);
         }
         layout = layout.replace(/{main}/, main);
         layout = layout.replace(/{header}/, header);

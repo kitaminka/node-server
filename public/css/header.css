@@ -1,40 +1,15 @@
 header {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 10%;
-    background-color: #fddb76;
+    width: 100%;
+    flex-direction: column;
 }
-.nav {
-    height: 100%;
-    margin-left: 10px;
+nav {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.navItem {
-    text-decoration: none;
-    color: #4396ff;
-    margin: 0 10px;
-    font-size: 25px;
-    background-color: #ffcb30;
-    padding: 10px;
-    border-radius: 10px;
-    transition: all 0.3s;
-    box-shadow: 0 -4px #ffbc47 inset;
-}
-.navItem:hover {
-    background-color: #ffbc47;
-    cursor: pointer;
-}
-.active {
-    background-color: #ffbc47;
-}
-.logo {
-    margin-left: 20px;
-    width: 50px;
-    height: 50px;
-}
-.logoImage {
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
 }
