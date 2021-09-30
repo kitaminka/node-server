@@ -5,7 +5,7 @@ module.exports = {
         let main = await this.getContent(name, response);
         const header = await this.getElem('header');
         const footer = await this.getElem('footer');
-        let layout = await this.getElem('layout');
+        let layout = await this.getElem('template');
 
         const title = main.match(/{setTitle "(.*?)"}/);
         if (title) {
