@@ -3,13 +3,12 @@ Node.js web server using only default [**http module**](https://nodejs.org/api/h
 ___
 ### Installation and launching
 - Clone repository to your computer.
-- Open a console in the cloned repository.
-- To install dependencies, write the following command in the terminal:
+- To install dependencies, use the following command:
 ```bash
 $ npm install
 ```
 - Create **.env** file and put your settings in this file. Example of **.env** file you can see in the file **.env.example**.
-- To start the program, write the following command in the terminal:
+- To start the program, use the following command:
 ```bash
 $ npm start
 ```
