@@ -5,12 +5,12 @@ ___
 - Clone repository to your computer.
 - To install dependencies, use the following command:
 ```bash
-$ npm install
+npm install
 ```
 - Create **.env** file and put your settings in this file. Example of **.env** file you can see in the file **.env.example**.
 - To start the program, use the following command:
 ```bash
-$ npm start
+npm start
 ```
 ___
 ### Features
