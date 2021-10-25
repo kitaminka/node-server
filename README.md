@@ -2,13 +2,16 @@
 Node.js web server using only default [**http module**](https://nodejs.org/api/http.html).
 ___
 ### Installation and launching
-- Clone repository to your computer.
-- To install dependencies, use the following command:
+- Clone repository:
+```bash
+git clone https://github.com/Kitaminka/NodeServer.git
+```
+- Install dependencies:
 ```bash
 npm install
 ```
 - Create **.env** file and put your settings in this file. Example of **.env** file you can see in the file **.env.example**.
-- To start the program, use the following command:
+- Start the program:
 ```bash
 npm start
 ```
