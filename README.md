@@ -2,7 +2,7 @@
 Node.js web server using only default [**http module**](https://nodejs.org/api/http.html).
 ___
 ### Installation and launching
-- Clone repository:
+- Clone the repository:
 ```bash
 git clone https://github.com/Kitaminka/NodeServer.git
 ```
