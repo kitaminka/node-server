@@ -1,7 +1,7 @@
 {
   "name": "nodeserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js web server using only default http module",
   "main": "index.js",
   "scripts": {
     "start": "node .",
