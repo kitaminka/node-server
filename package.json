@@ -1,5 +1,5 @@
 {
-  "name": "nodeserver",
+  "name": "node-server",
   "version": "1.0.0",
   "description": "Node.js web server using only default http module",
   "main": "index.js",
@@ -11,16 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/Kitaminka/NodeServer.git"
   },
-  "author": "Kitaminka",
+  "author": "kitaminka",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kitaminka/NodeServer/issues"
   },
   "homepage": "https://github.com/Kitaminka/NodeServer#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.13"
-  },
+  "keywords": ["nodejs", "webserver", "http-server", "node-server"],
   "dependencies": {
     "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
