@@ -9,19 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kitaminka/NodeServer.git"
+    "url": "git+https://github.com/kitaminka/node-server.git"
   },
   "author": "kitaminka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kitaminka/NodeServer/issues"
+    "url": "https://github.com/kitaminka/node-server/issues"
   },
-  "homepage": "https://github.com/Kitaminka/NodeServer#readme",
-  "keywords": ["nodejs", "webserver", "http-server", "node-server"],
-  "dependencies": {
-    "dotenv": "^10.0.0"
-  },
+  "homepage": "https://github.com/kitaminka/node-server#readme",
+  "keywords": [
+    "nodejs",
+    "webserver",
+    "http-server",
+    "node-server"
+  ],
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "2.0.19"
   }
 }

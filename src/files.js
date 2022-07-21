@@ -1,4 +1,5 @@
 const fs = require('fs');
+const config = require('../config.json');
 
 module.exports = {
     async getPage(name, response) {
@@ -12,7 +13,7 @@ module.exports = {
             layout = layout.replace(/{getTitle}/, title[1]);
             main = main.replace(/{setTitle ".*?"}/, '');
         } else {
-            layout = layout.replace(/{getTitle}/, process.env.DEFAULT_TITLE);
+            layout = layout.replace(/{getTitle}/, config.defaultTitle);
         }
         layout = layout.replace(/{main}/, main);
         layout = layout.replace(/{header}/, header);

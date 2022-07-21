@@ -1,6 +1,6 @@
 const server = require('./src/server');
-require('dotenv').config();
+const config = require('./config.json');
 
 server.start().then(() => {
-    console.log(`Server started on port ${process.env.PORT || 3000}`);
+    console.log(`Server started on port ${config.port}`);
 });

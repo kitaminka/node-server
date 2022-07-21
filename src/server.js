@@ -1,5 +1,6 @@
 const http = require('http');
 const page = require('./files');
+const config = require('../config.json');
 
 module.exports = {
     async start() {
@@ -14,7 +15,7 @@ module.exports = {
                 }
                 this.returnPage(request, response);
             }
-        }).listen(process.env.PORT || 3000);
+        }).listen(config.port);
     },
     async redirectHome(response) {
         response.statusCode = 302;
